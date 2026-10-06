@@ -225,21 +225,6 @@ a {
 
 /* MOBILE MENU */
 
-.mobile-menu-button {
-  display: none;
-
-  width: 24px;
-
-  padding: 0;
-
-  border: 0;
-
-  background: transparent;
-
-  flex-direction: column;
-
-  gap: 5px;
-}
 
 .mobile-menu-button span {
   width: 100%;
@@ -255,7 +240,6 @@ a {
    HEADER MOBILE
 ========================= */
 
-@media (max-width: 800px) {
 
   .main-nav {
     display: none;
@@ -278,7 +262,6 @@ a {
     display: flex;
   }
 
-}
 
 
 /* =========================
@@ -5412,6 +5395,626 @@ a {
 
   .mobile-access-links a {
     padding-left: 36px;
+  }
+
+}
+
+/* =========================================================
+   RICK SPRINGFIELD MOBILE MENU - FINAL
+   ========================================================= */
+
+.rs-mobile-menu-button {
+  display: none;
+}
+
+
+/* DESKTOP ACCESS-RS */
+
+.desktop-access {
+  position: relative;
+}
+
+.desktop-access button {
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  padding: 0;
+
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+}
+
+.desktop-access button span {
+  margin-left: 5px;
+}
+
+.desktop-access-menu {
+  position: absolute;
+  z-index: 9999;
+
+  top: 28px;
+  left: -15px;
+
+  width: 170px;
+
+  background: #050505;
+  border-top: 2px solid #e5232d;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.desktop-access-menu a {
+  display: block;
+
+  padding: 14px 16px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.desktop-access-menu a:hover {
+  background: #e5232d;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+  /* Hide desktop navigation */
+
+  .main-nav {
+    display: none !important;
+  }
+
+
+  /* Hide desktop icons */
+
+  .header-actions .icon-button {
+    display: none !important;
+  }
+
+
+  /* MOBILE HAMBURGER */
+
+  .rs-mobile-menu-button {
+    display: flex !important;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 4px;
+
+    margin: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    position: relative;
+    z-index: 10000;
+  }
+
+
+  .rs-line {
+    display: block;
+
+    width: 24px;
+    height: 2px;
+
+    background: #ffffff;
+
+    transition: all 0.2s ease;
+  }
+
+
+  /* HAMBURGER -> X */
+
+  .rs-line-1.open {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .rs-line-2.open {
+    opacity: 0;
+  }
+
+  .rs-line-3.open {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+
+  /* MOBILE PANEL */
+
+  .rs-mobile-panel {
+    display: block !important;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    background: #050505;
+
+    z-index: 9998;
+
+    box-shadow:
+      0 12px 25px rgba(0, 0, 0, 0.5);
+
+    border-top: 1px solid #222222;
+  }
+
+
+  /* MOBILE LINKS */
+
+  .rs-mobile-nav {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+  }
+
+
+  .rs-mobile-nav > a,
+  .rs-mobile-access-button {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    min-height: 58px;
+
+    padding: 0 24px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border: 0;
+
+    border-bottom: 1px solid #2b2b2b;
+
+    background: #050505;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+
+  .rs-mobile-nav > a:hover,
+  .rs-mobile-access-button:hover {
+    background: #171717;
+  }
+
+
+  /* ACCESS-RS BUTTON */
+
+  .rs-mobile-access-button {
+    appearance: none;
+  }
+
+
+  /* ACCESS-RS SUBMENU */
+
+  .rs-mobile-access-links {
+    display: flex;
+
+    flex-direction: column;
+
+    background: #151515;
+  }
+
+
+  .rs-mobile-access-links a {
+    min-height: 50px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 24px 0 45px;
+
+    border-bottom: 1px solid #292929;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .rs-mobile-access-links a::before {
+    content: "→";
+
+    color: #e5232d;
+
+    margin-right: 12px;
+  }
+
+
+  .rs-mobile-access-links a:hover {
+    background: #222222;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media screen and (max-width: 420px) {
+
+  .rs-mobile-nav > a,
+  .rs-mobile-access-button {
+    min-height: 54px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-size: 12px;
+  }
+
+
+  .rs-mobile-access-links a {
+    padding-left: 36px;
+  }
+
+}
+
+/* =========================================================
+   FINAL RICK SPRINGFIELD HEADER
+   ========================================================= */
+
+.rs-header {
+  position: relative;
+  z-index: 9999;
+  background: #050505;
+  color: #ffffff;
+}
+
+.rs-header-bar {
+  width: 100%;
+  min-height: 68px;
+  padding: 0 10px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+.rs-logo {
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -1px;
+
+  white-space: nowrap;
+}
+
+
+/* DESKTOP NAV */
+
+.rs-desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  margin-left: 28px;
+}
+
+.rs-desktop-nav a,
+.rs-desktop-nav button {
+  color: #ffffff;
+  background: transparent;
+  border: 0;
+
+  text-decoration: none;
+
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.rs-desktop-nav a:hover,
+.rs-desktop-nav button:hover {
+  opacity: 0.65;
+}
+
+
+/* DESKTOP ACCESS MENU */
+
+.rs-desktop-access {
+  position: relative;
+}
+
+.rs-desktop-access-menu {
+  position: absolute;
+  top: 30px;
+  left: -15px;
+
+  width: 170px;
+
+  background: #050505;
+  border-top: 2px solid #e5232d;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,.5);
+}
+
+.rs-desktop-access-menu a {
+  display: block;
+
+  padding: 14px 16px;
+
+  font-size: 10px;
+}
+
+.rs-desktop-access-menu a:hover {
+  background: #e5232d;
+  opacity: 1;
+}
+
+
+/* DESKTOP ICONS */
+
+.rs-desktop-icons {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+   ========================================================= */
+
+.rs-menu-button {
+  display: none;
+
+  width: 34px;
+  height: 34px;
+
+  margin-left: auto;
+  padding: 5px;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.rs-menu-button span {
+  display: block;
+
+  width: 24px;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.rs-mobile-menu {
+  display: none;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+  .rs-header-bar {
+    min-height: 64px;
+    padding: 0 16px;
+  }
+
+
+  .rs-desktop-nav,
+  .rs-desktop-icons {
+    display: none;
+  }
+
+
+  .rs-menu-button {
+    display: flex;
+  }
+
+
+  .rs-mobile-menu {
+    display: none;
+
+    width: 100%;
+
+    background: #050505;
+
+    border-top: 1px solid #292929;
+
+    box-sizing: border-box;
+  }
+
+
+  .rs-mobile-menu.show {
+    display: block;
+  }
+
+
+  .rs-mobile-menu > a,
+  .rs-mobile-access {
+    display: flex;
+
+    width: 100%;
+    min-height: 58px;
+
+    box-sizing: border-box;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 24px;
+
+    border: 0;
+    border-bottom: 1px solid #292929;
+
+    background: #050505;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+
+  .rs-mobile-menu > a:hover,
+  .rs-mobile-access:hover {
+    background: #181818;
+  }
+
+
+  .rs-mobile-access {
+    appearance: none;
+  }
+
+
+  /* ACCESS-RS SUBMENU */
+
+  .rs-mobile-submenu {
+    display: block;
+
+    background: #161616;
+  }
+
+
+  .rs-mobile-submenu a {
+    display: flex;
+
+    align-items: center;
+
+    min-height: 50px;
+
+    padding: 0 24px 0 45px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #292929;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+
+
+  .rs-mobile-submenu a::before {
+    content: "→";
+
+    color: #e5232d;
+
+    margin-right: 12px;
+  }
+
+}
+
+
+/* SMALL PHONE */
+
+@media screen and (max-width: 450px) {
+
+  .rs-logo {
+    font-size: 15px;
+  }
+
+  .rs-header-bar {
+    min-height: 60px;
+  }
+
+  .rs-mobile-menu > a,
+  .rs-mobile-access {
+    min-height: 54px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-size: 12px;
   }
 
 }
