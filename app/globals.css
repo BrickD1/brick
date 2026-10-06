@@ -4595,3 +4595,490 @@ a {
   }
 
 }
+
+/* =========================================================
+   MEET RICK PRODUCT PAGE
+   ========================================================= */
+
+.meet-rick-page {
+  background: #ffffff;
+  color: #111111;
+}
+
+
+/* STORE CATEGORY BAR */
+
+.meet-rick-store-nav {
+  min-height: 34px;
+  background: #e5232d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  padding: 8px 20px;
+  flex-wrap: wrap;
+}
+
+.meet-rick-store-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+  white-space: nowrap;
+}
+
+.meet-rick-store-nav a:hover,
+.meet-rick-store-nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
+/* PRODUCT AREA */
+
+.meet-rick-product {
+  background: #ffffff;
+  padding: 22px 20px 60px;
+}
+
+.meet-rick-product-grid {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+  gap: 40px;
+  align-items: start;
+}
+
+
+/* PRODUCT IMAGE */
+
+.meet-rick-image-column {
+  width: 100%;
+}
+
+.meet-rick-main-image {
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.meet-rick-main-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* PRODUCT INFORMATION */
+
+.meet-rick-info {
+  padding: 2px 10px 0;
+  text-align: center;
+}
+
+.meet-rick-info h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.meet-rick-price {
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.shipping-note {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #e5232d;
+  text-decoration: underline;
+}
+
+.installment-note {
+  margin: 10px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #555555;
+}
+
+.meet-rick-instruction {
+  margin: 24px 0 20px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+}
+
+
+/* FORM */
+
+.meet-rick-field {
+  margin-bottom: 16px;
+}
+
+.meet-rick-field label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 12px;
+  color: #555555;
+}
+
+.meet-rick-field input,
+.meet-rick-field select {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #999999;
+  background: #ffffff;
+  color: #111111;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.meet-rick-field input:focus,
+.meet-rick-field select:focus {
+  border-color: #e5232d;
+}
+
+.meet-rick-field p {
+  margin: 7px 0 0;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #666666;
+}
+
+
+/* QUANTITY */
+
+.meet-rick-quantity {
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #999999;
+  width: 120px;
+  margin: 0 auto;
+}
+
+.meet-rick-quantity button {
+  width: 38px;
+  height: 40px;
+  border: 0;
+  background: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.meet-rick-quantity button:hover {
+  background: #f2f2f2;
+}
+
+.meet-rick-quantity span {
+  width: 44px;
+  text-align: center;
+  font-size: 13px;
+}
+
+
+/* BUY BUTTON */
+
+.meet-rick-buy-button {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 22px;
+  background: #050505;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.meet-rick-buy-button:hover {
+  background: #e5232d;
+}
+
+
+/* NOTICE */
+
+.meet-rick-small-notice {
+  margin-top: 22px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #555555;
+}
+
+.meet-rick-share {
+  margin-top: 26px;
+  text-align: left;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #e5232d;
+}
+
+
+/* =========================================================
+   RELATED PRODUCTS
+   ========================================================= */
+
+.meet-rick-related {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 55px 20px 65px;
+  text-align: center;
+}
+
+.meet-rick-related h2 {
+  display: inline-block;
+  margin: 0 0 32px;
+  padding: 8px 14px;
+  background: #050505;
+  color: #ffffff;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.meet-rick-related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.meet-rick-related-card {
+  text-align: center;
+}
+
+.related-image {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: #f3f3f3;
+  overflow: hidden;
+}
+
+.related-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.related-sale {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  padding: 5px 8px;
+  background: #050505;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.meet-rick-related-card h3 {
+  margin: 10px 5px 5px;
+  font-size: 11px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.related-price {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.old-price {
+  margin-right: 6px;
+  color: #777777;
+  text-decoration: line-through;
+}
+
+
+/* =========================================================
+   ACCESS-RS DARK SECTION
+   ========================================================= */
+
+.meet-rick-access {
+  position: relative;
+  min-height: 430px;
+  background:
+    linear-gradient(
+      rgba(10, 10, 10, 0.78),
+      rgba(10, 10, 10, 0.78)
+    ),
+    url("/images/access-rs-join.jpg") center right / cover no-repeat;
+  color: #ffffff;
+}
+
+.meet-rick-access-overlay {
+  min-height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 20px;
+}
+
+.meet-rick-access-content {
+  width: min(650px, 100%);
+  text-align: center;
+}
+
+.meet-rick-access-content h2 {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 7px 13px;
+  background: #050505;
+  color: #ffffff;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.access-login {
+  margin: 0 0 18px;
+  font-size: 12px;
+}
+
+.access-login a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.access-intro {
+  margin: 0 auto 20px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.meet-rick-access-content h3 {
+  margin: 20px 0 12px;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.meet-rick-access-content ul {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 22px;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.meet-rick-access-content li {
+  margin: 5px 0;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.meet-rick-access-content li::before {
+  content: "- ";
+}
+
+.meet-rick-access-button {
+  display: inline-flex;
+  min-width: 125px;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
+  background: #e5232d;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.meet-rick-access-button:hover {
+  background: #ffffff;
+  color: #050505;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .meet-rick-product-grid {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+  }
+
+  .meet-rick-info {
+    padding: 10px 0 0;
+  }
+
+  .meet-rick-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 28px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .meet-rick-store-nav {
+    gap: 12px 18px;
+    padding: 10px 12px;
+  }
+
+  .meet-rick-store-nav a {
+    font-size: 9px;
+  }
+
+  .meet-rick-product {
+    padding: 12px 12px 45px;
+  }
+
+  .meet-rick-info h1 {
+    font-size: 26px;
+  }
+
+  .meet-rick-related {
+    padding: 40px 12px 50px;
+  }
+
+  .meet-rick-related-grid {
+    gap: 20px 8px;
+  }
+
+  .meet-rick-related-card h3 {
+    font-size: 10px;
+  }
+
+  .meet-rick-access,
+  .meet-rick-access-overlay {
+    min-height: 520px;
+  }
+
+  .meet-rick-access-overlay {
+    padding: 45px 15px;
+  }
+
+  .meet-rick-access-content h2 {
+    font-size: 15px;
+  }
+
+  .meet-rick-access-content li {
+    font-size: 11px;
+  }
+
+}
