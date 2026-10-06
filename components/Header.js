@@ -51,11 +51,11 @@ export default function Header() {
                BEACH BAR RUM
             </Link>
 
-            <Link href="/about">
+            <Link href="/news">
               NEWS
             </Link>
 
-            <Link href="/about">
+            <Link href="/video">
               VIDEO
             </Link>
 

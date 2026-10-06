@@ -4,39 +4,87 @@ export default function Footer() {
   return (
     <footer className="site-footer">
 
-      <div className="footer-grid">
+      <div className="footer-brand">
+        RICK SPRINGFIELD
+      </div>
 
-        <div>
-          <div className="footer-logo">
-            RICK SPRINGFIELD
-          </div>
+      <div className="footer-socials">
 
-          <p>
-            Official experience, tickets and merchandise.
-          </p>
-        </div>
+        <a href="#" aria-label="Facebook">
+          f
+        </a>
 
-        <div>
-          <h3>EXPLORE</h3>
+        <a href="#" aria-label="Instagram">
+          ◎
+        </a>
 
-          <Link href="/shows">Shows</Link>
-          <Link href="/shop">Merch</Link>
-          <Link href="/meet-rick">Meet Rick</Link>
-          <Link href="/about">About</Link>
-        </div>
+        <a href="#" aria-label="YouTube">
+          ▶
+        </a>
 
-        <div>
-          <h3>HELP</h3>
+        <a href="#" aria-label="TikTok">
+          ♪
+        </a>
 
-          <Link href="/about">Contact</Link>
-          <Link href="/about">FAQ</Link>
-          <Link href="/meet-rick">VIP Information</Link>
-        </div>
+        <a href="#" aria-label="X">
+          X
+        </a>
+
+        <a href="#" aria-label="Spotify">
+          ●
+        </a>
+
+        <a href="#" aria-label="Apple Music">
+          
+        </a>
+
+        <a href="#" aria-label="Amazon Music">
+          a
+        </a>
+
+        <a href="#" aria-label="Music">
+          ▥
+        </a>
 
       </div>
 
-      <div className="footer-bottom">
-        © 2026 RICK SPRINGFIELD. All rights reserved.
+      <nav className="footer-links">
+
+        <Link href="/about">
+          CONTACT US
+        </Link>
+
+        <Link href="/access-rs">
+          ACCESS RS - FAQ
+        </Link>
+
+        <Link href="/about">
+          RETURNS
+        </Link>
+
+        <Link href="/about">
+          FAN SITES
+        </Link>
+
+        <Link href="/about">
+          TERMS AND CONDITIONS
+        </Link>
+
+        <Link href="/about">
+          PRIVACY POLICY
+        </Link>
+
+        <Link href="/about">
+          ACCESSIBILITY
+        </Link>
+
+      </nav>
+
+      <div className="footer-copyright">
+        © 2026, <span>RICK SPRINGFIELD</span> POWERED by{" "}
+        <a href="#" className="footer-onelive">
+          ONELIVE
+        </a>
       </div>
 
     </footer>
