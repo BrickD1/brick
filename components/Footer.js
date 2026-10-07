@@ -10,11 +10,7 @@ export default function Footer() {
 
       <div className="footer-socials">
 
-        <a href="#" aria-label="Facebook">
-          f
-        </a>
-
-        <a href="#" aria-label="Instagram">
+       <a href="#" aria-label="Instagram">
           ◎
         </a>
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-const WHATSAPP_NUMBER = "16157413365";
+const WHATSAPP_NUMBER = "16507413365";
 
 const membershipBenefits = [
   "Access to presale tickets",
