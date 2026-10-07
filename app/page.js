@@ -117,24 +117,12 @@ export default function Home() {
           <div className="home-hero-content">
 
             <h1>
-              LIVE CONCERTS!
+            
             </h1>
 
             <div className="home-hero-buttons">
 
-              <Link
-                href="/shows"
-                className="home-red-button"
-              >
-                TICKETS &amp; VIP MEET-N-GREETS
-              </Link>
-
-              <Link
-                href="/shows"
-                className="home-red-button"
-              >
-                SEE ALL SHOW DATES
-              </Link>
+              
 
             </div>
 
