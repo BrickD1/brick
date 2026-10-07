@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+
+const WHATSAPP_NUMBER = "16157413365";
 
 const membershipBenefits = [
   "Access to presale tickets",
@@ -14,12 +19,42 @@ const membershipBenefits = [
   "Other member-only content and opportunities, when available",
 ];
 
+const membershipOptions = [
+  {
+    name: "ACCESS-RS MEMBERSHIP 2026",
+    price: "$500.00",
+  },
+  {
+    name: "ACCESS-RS MEMBERSHIP VIP 2026",
+    price: "$1,500.00",
+  },
+  {
+    name: "ACCESS-RS MEMBERSHIP VVIP 2026",
+    price: "$3,000.00",
+  },
+];
+
 export default function JoinAccessRSPage() {
+  const [selectedMembership, setSelectedMembership] = useState(null);
+
+  function getWhatsAppUrl(membership) {
+    const message =
+      `Hello, how do I make my payment on here for ${membership.name}?\n\n` +
+      `Membership: ${membership.name}\n` +
+      `Price: ${membership.price}`;
+
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+      message
+    )}`;
+  }
+
   return (
     <>
       <Header />
 
       <main className="join-access-page">
+
+        {/* ACCESS-RS INTRO */}
 
         <section className="join-access-main">
 
@@ -74,7 +109,7 @@ export default function JoinAccessRSPage() {
         </section>
 
 
-        {/* MEMBERSHIP PRODUCT */}
+        {/* MEMBERSHIP PRODUCTS */}
 
         <section className="membership-product">
 
@@ -90,102 +125,113 @@ export default function JoinAccessRSPage() {
 
           <div className="membership-product-info">
 
-            <p className="membership-label">
-              RICK SPRINGFIELD MERCHANDISE
-            </p>
+            {membershipOptions.map((membership) => (
 
-            <h2>
-              ACCESS-RS
-              <br />
-              MEMBERSHIP
-              <br />
-              2026
-            </h2>
+              <div
+                className="membership-option"
+                key={membership.name}
+              >
 
-            <p className="membership-price">
-              $500.00
-            </p>
+                <p className="membership-label">
+                  RICK SPRINGFIELD MERCHANDISE
+                </p>
 
-            <button
-              type="button"
-              className="membership-cart-button"
-            >
-              BUY NOW
-            </button>
+                <h2>
+                  {membership.name}
+                </h2>
 
-            <Link
-              href="#"
-              className="membership-details-link"
-            >
-              View full details →
-            </Link>
+                <p className="membership-price">
+                  {membership.price}
+                </p>
 
+                <button
+                  type="button"
+                  className="membership-cart-button"
+                  onClick={() =>
+                    setSelectedMembership(membership)
+                  }
+                >
+                  BUY NOW
+                </button>
 
-            <p className="membership-label">
-              RICK SPRINGFIELD MERCHANDISE
-            </p>
+                <Link
+                  href="#"
+                  className="membership-details-link"
+                >
+                  View full details →
+                </Link>
 
-            <h2>
-              ACCESS-RS
-              <br />
-              MEMBERSHIP VIP
-              <br />
-              2026
-            </h2>
+              </div>
 
-            <p className="membership-price">
-              $1,500.00
-            </p>
-
-            <button
-              type="button"
-              className="membership-cart-button"
-            >
-              BUY NOW
-            </button>
-
-            <Link
-              href="#"
-              className="membership-details-link"
-            >
-              View full details →
-            </Link>
-
-            <p className="membership-label">
-              RICK SPRINGFIELD MERCHANDISE
-            </p>
-
-            <h2>
-              ACCESS-RS
-              <br />
-              MEMBERSHIP VVIP
-              <br />
-              2026
-            </h2>
-
-            <p className="membership-price">
-              $3,000.00
-            </p>
-
-            <button
-              type="button"
-              className="membership-cart-button"
-            >
-              BUY NOW
-            </button>
-
-            <Link
-              href="#"
-              className="membership-details-link"
-            >
-              View full details →
-            </Link>
+            ))}
 
           </div>
 
         </section>
 
       </main>
+
+
+      {/* PAYMENT CONFIRMATION */}
+
+      {selectedMembership && (
+
+        <div className="membership-payment-overlay">
+
+          <div className="membership-payment-box">
+
+            <button
+              type="button"
+              className="membership-payment-close"
+              onClick={() =>
+                setSelectedMembership(null)
+              }
+              aria-label="Close"
+            >
+              ×
+            </button>
+
+            <p className="membership-payment-small">
+              ACCESS-RS MEMBERSHIP
+            </p>
+
+            <h2>
+              {selectedMembership.name}
+            </h2>
+
+            <p className="membership-payment-price">
+              {selectedMembership.price}
+            </p>
+
+            <p className="membership-payment-text">
+              You will be taken to WhatsApp to arrange
+              payment for this membership.
+            </p>
+
+            <a
+              href={getWhatsAppUrl(selectedMembership)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="membership-payment-whatsapp"
+            >
+              CONTINUE TO WHATSAPP
+            </a>
+
+            <button
+              type="button"
+              className="membership-payment-cancel"
+              onClick={() =>
+                setSelectedMembership(null)
+              }
+            >
+              CANCEL
+            </button>
+
+          </div>
+
+        </div>
+
+      )}
 
       <Footer />
     </>

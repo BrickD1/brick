@@ -110,9 +110,7 @@ export default function ShowsPage() {
 
       <main className="shows-page">
 
-        {/* =====================================
-            TOP PHOTO STRIP
-        ====================================== */}
+        {/* TOP PHOTO STRIP */}
 
         <section className="shows-photo-strip">
 
@@ -154,18 +152,14 @@ export default function ShowsPage() {
         </section>
 
 
-        {/* =====================================
-            PAGE TITLE
-        ====================================== */}
+        {/* PAGE TITLE */}
 
         <section className="shows-title">
           <h1>UPCOMING SHOWS</h1>
         </section>
 
 
-        {/* =====================================
-            SHOW LIST
-        ====================================== */}
+        {/* SHOW LIST */}
 
         <section className="shows-list">
 
@@ -223,9 +217,7 @@ export default function ShowsPage() {
         </section>
 
 
-        {/* =====================================
-            BOTTOM MESSAGE
-        ====================================== */}
+        {/* BOTTOM MESSAGE */}
 
         <section className="shows-bottom-message">
 

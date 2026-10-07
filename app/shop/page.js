@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+
+const WHATSAPP_NUMBER = "16157413365";
 
 const apparelProducts = [
   {
@@ -73,42 +78,54 @@ const musicProducts = [
   },
 ];
 
-function ProductCard({ product }) {
+function ProductCard({ product, onBuy }) {
   return (
     <article className="store-product-card">
 
-      <div className="store-product-image">
+      <button
+        type="button"
+        className="store-product-buy"
+        onClick={() => onBuy(product)}
+      >
 
-        {product.sale && (
-          <span className="store-sale-badge">
-            Sale
+        <div className="store-product-image">
+
+          {product.sale && (
+            <span className="store-sale-badge">
+              Sale
+            </span>
+          )}
+
+          <img
+            src={product.image}
+            alt={product.name}
+          />
+
+        </div>
+
+        <h3>
+          {product.name}
+        </h3>
+
+        <div className="store-product-price">
+
+          {product.oldPrice && (
+            <span className="store-old-price">
+              {product.oldPrice}
+            </span>
+          )}
+
+          <span>
+            {product.price}
           </span>
-        )}
 
-        <img
-          src={product.image}
-          alt={product.name}
-        />
+        </div>
 
-      </div>
-
-      <h3>
-        {product.name}
-      </h3>
-
-      <div className="store-product-price">
-
-        {product.oldPrice && (
-          <span className="store-old-price">
-            {product.oldPrice}
-          </span>
-        )}
-
-        <span>
-          {product.price}
+        <span className="store-buy-label">
+          BUY NOW
         </span>
 
-      </div>
+      </button>
 
     </article>
   );
@@ -118,7 +135,7 @@ function ProductCard({ product }) {
 function ProductSection({
   title,
   products,
-  viewAllHref,
+  onBuy,
 }) {
   return (
     <section className="store-product-section">
@@ -135,6 +152,7 @@ function ProductSection({
             <ProductCard
               key={index}
               product={product}
+              onBuy={onBuy}
             />
           ))}
 
@@ -142,12 +160,12 @@ function ProductSection({
 
         <div className="store-view-all-wrap">
 
-          <Link
-            href={viewAllHref}
+          <button
+            type="button"
             className="store-view-all"
           >
             VIEW ALL
-          </Link>
+          </button>
 
         </div>
 
@@ -159,6 +177,24 @@ function ProductSection({
 
 
 export default function ShopPage() {
+
+  const [selectedProduct, setSelectedProduct] =
+    useState(null);
+
+
+  function getWhatsAppUrl(product) {
+
+    const message =
+      `Hello, how do I make my payment on here for ${product.name}?\n\n` +
+      `Product: ${product.name}\n` +
+      `Price: ${product.price}`;
+
+    return (
+      `https://wa.me/${WHATSAPP_NUMBER}?text=` +
+      encodeURIComponent(message)
+    );
+  }
+
 
   return (
     <>
@@ -234,7 +270,7 @@ export default function ShopPage() {
           <ProductSection
             title="APPAREL"
             products={apparelProducts}
-            viewAllHref="#"
+            onBuy={setSelectedProduct}
           />
 
         </div>
@@ -302,7 +338,7 @@ export default function ShopPage() {
           <ProductSection
             title="COOL GEAR"
             products={coolGearProducts}
-            viewAllHref="#"
+            onBuy={setSelectedProduct}
           />
 
         </div>
@@ -317,7 +353,7 @@ export default function ShopPage() {
           <ProductSection
             title="MUSIC/VIDEO"
             products={musicProducts}
-            viewAllHref="#"
+            onBuy={setSelectedProduct}
           />
 
         </div>
@@ -331,6 +367,66 @@ export default function ShopPage() {
         </section>
 
       </main>
+
+
+      {/* =========================
+          WHATSAPP PAYMENT POPUP
+      ========================= */}
+
+      {selectedProduct && (
+
+        <div className="store-payment-overlay">
+
+          <div className="store-payment-box">
+
+            <button
+              type="button"
+              className="store-payment-close"
+              onClick={() => setSelectedProduct(null)}
+              aria-label="Close"
+            >
+              ×
+            </button>
+
+            <p className="store-payment-small">
+              RICK SPRINGFIELD STORE
+            </p>
+
+            <h2>
+              {selectedProduct.name}
+            </h2>
+
+            <p className="store-payment-price">
+              {selectedProduct.price}
+            </p>
+
+            <p className="store-payment-text">
+              You will be taken to WhatsApp to arrange
+              payment for this item.
+            </p>
+
+            <a
+              href={getWhatsAppUrl(selectedProduct)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="store-payment-whatsapp"
+            >
+              CONTINUE TO WHATSAPP
+            </a>
+
+            <button
+              type="button"
+              className="store-payment-cancel"
+              onClick={() => setSelectedProduct(null)}
+            >
+              CANCEL
+            </button>
+
+          </div>
+
+        </div>
+
+      )}
 
       <Footer />
     </>

@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
+const WHATSAPP_NUMBER = "16507413365";
 
 const message =
   "Hello, how do I make my payment on here for VIP Backstage Meet & Greet?";

@@ -6018,3 +6018,686 @@ a {
   }
 
 }
+
+/* =========================================================
+   ACCESS-RS MEMBERSHIP PAYMENT
+   ========================================================= */
+
+.membership-option {
+  margin-bottom: 70px;
+}
+
+.membership-option:last-child {
+  margin-bottom: 0;
+}
+
+.membership-option h2 {
+  margin: 0 0 18px;
+  font-size: 30px;
+  line-height: 1.05;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.membership-payment-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.membership-payment-box {
+  position: relative;
+
+  width: 100%;
+  max-width: 500px;
+
+  padding: 50px 40px 40px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  color: #000000;
+
+  text-align: center;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.membership-payment-close {
+  position: absolute;
+
+  top: 12px;
+  right: 16px;
+
+  width: 35px;
+  height: 35px;
+
+  border: 0;
+  background: transparent;
+
+  font-size: 30px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.membership-payment-small {
+  margin: 0 0 15px;
+
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.membership-payment-box h2 {
+  margin: 0 auto 18px;
+
+  max-width: 400px;
+
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.membership-payment-price {
+  margin: 0 0 25px;
+
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.membership-payment-text {
+  margin: 0 auto 30px;
+
+  max-width: 400px;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.membership-payment-whatsapp {
+  display: block;
+
+  width: 100%;
+  padding: 17px 20px;
+
+  box-sizing: border-box;
+
+  background: #e5232d;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.membership-payment-whatsapp:hover {
+  background: #c91d26;
+}
+
+.membership-payment-cancel {
+  margin-top: 15px;
+
+  border: 0;
+  background: transparent;
+
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+
+.membership-payment-cancel:hover {
+  text-decoration: underline;
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 700px) {
+
+  .membership-option {
+    margin-bottom: 55px;
+  }
+
+  .membership-option h2 {
+    font-size: 25px;
+  }
+
+  .membership-payment-box {
+    padding: 45px 25px 30px;
+  }
+
+  .membership-payment-box h2 {
+    font-size: 24px;
+  }
+
+}
+
+/* =========================================================
+   STORE PRODUCT WHATSAPP PAYMENT
+   ========================================================= */
+
+.store-product-buy {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.store-product-buy:hover .store-product-image img {
+  transform: scale(1.03);
+}
+
+.store-product-image {
+  overflow: hidden;
+}
+
+.store-product-image img {
+  display: block;
+  width: 100%;
+  transition: transform 0.25s ease;
+}
+
+.store-buy-label {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+
+  background: #000;
+  color: #fff;
+
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.store-product-buy:hover .store-buy-label {
+  background: #e5232d;
+}
+
+
+/* PAYMENT OVERLAY */
+
+.store-payment-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.store-payment-box {
+  position: relative;
+
+  width: 100%;
+  max-width: 500px;
+
+  padding: 50px 40px 40px;
+
+  box-sizing: border-box;
+
+  background: #fff;
+  color: #000;
+
+  text-align: center;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.store-payment-close {
+  position: absolute;
+
+  top: 12px;
+  right: 16px;
+
+  width: 35px;
+  height: 35px;
+
+  border: 0;
+  background: transparent;
+
+  font-size: 30px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.store-payment-small {
+  margin: 0 0 15px;
+
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.store-payment-box h2 {
+  margin: 0 auto 18px;
+
+  max-width: 400px;
+
+  font-size: 29px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.store-payment-price {
+  margin: 0 0 25px;
+
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.store-payment-text {
+  margin: 0 auto 30px;
+
+  max-width: 400px;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.store-payment-whatsapp {
+  display: block;
+
+  width: 100%;
+
+  padding: 17px 20px;
+
+  box-sizing: border-box;
+
+  background: #e5232d;
+  color: #fff;
+
+  text-decoration: none;
+
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.store-payment-whatsapp:hover {
+  background: #c91d26;
+}
+
+.store-payment-cancel {
+  margin-top: 15px;
+
+  border: 0;
+  background: transparent;
+
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+
+.store-payment-cancel:hover {
+  text-decoration: underline;
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 700px) {
+
+  .store-payment-box {
+    padding: 45px 25px 30px;
+  }
+
+  .store-payment-box h2 {
+    font-size: 24px;
+  }
+
+}
+
+/* =========================================================
+   ACCESS-RS - LARGER, MORE READABLE TYPE
+   ========================================================= */
+
+.members-only-page {
+  width: 100%;
+}
+
+
+/* MEMBER NAVIGATION */
+
+.member-nav {
+  width: 100%;
+  background: #e5232d;
+}
+
+.member-nav-inner {
+  width: 100%;
+  min-height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 42px;
+
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+.member-nav-inner a {
+  color: #ffffff;
+  text-decoration: none;
+
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+
+  white-space: nowrap;
+}
+
+.member-nav-inner a:hover {
+  opacity: 0.7;
+}
+
+
+/* RESTRICTED AREA */
+
+.members-restricted {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 85px 30px 100px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+
+/* ACCESS-RS */
+
+.members-page-title {
+  margin: 0 0 25px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+
+/* LOCK */
+
+.members-lock {
+  margin: 0 0 30px;
+
+  font-size: 48px;
+  line-height: 1;
+}
+
+
+/* MAIN HEADING */
+
+.members-restricted h1 {
+  margin: 0 auto 28px;
+
+  max-width: 850px;
+
+  font-size: 42px;
+  line-height: 1.08;
+
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+
+/* LOGIN MESSAGE */
+
+.members-login-message {
+  max-width: 720px;
+
+  margin: 0 auto 42px;
+
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+
+/* BENEFITS */
+
+.members-benefits {
+  max-width: 700px;
+
+  margin: 0 auto 45px;
+
+  padding-left: 30px;
+
+  text-align: left;
+}
+
+.members-benefits li {
+  margin-bottom: 15px;
+
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+
+/* BUTTONS */
+
+.members-actions {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 28px;
+}
+
+.member-login-button,
+.member-buy-button {
+  display: inline-flex;
+
+  min-width: 190px;
+  min-height: 52px;
+
+  padding: 0 25px;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.member-login-button {
+  background: #e5232d;
+  color: #ffffff;
+}
+
+.member-login-button:hover {
+  background: #c91d26;
+}
+
+.member-buy-button {
+  background: #000000;
+  color: #ffffff;
+}
+
+.member-buy-button:hover {
+  background: #222222;
+}
+
+
+/* FORGOT PASSWORD */
+
+.forgot-password {
+  color: #000000;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  text-decoration: underline;
+}
+
+.forgot-password:hover {
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+  .member-nav-inner {
+    min-height: auto;
+
+    padding: 16px 20px;
+
+    gap: 18px 25px;
+
+    flex-wrap: wrap;
+  }
+
+  .member-nav-inner a {
+    font-size: 12px;
+  }
+
+  .members-restricted {
+    padding: 65px 25px 80px;
+  }
+
+  .members-restricted h1 {
+    font-size: 34px;
+  }
+
+  .members-login-message {
+    font-size: 18px;
+  }
+
+  .members-benefits li {
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .member-nav-inner {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0;
+
+    padding: 0;
+  }
+
+  .member-nav-inner a {
+    min-height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px;
+
+    border-bottom: 1px solid rgba(255,255,255,.25);
+
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    text-align: center;
+  }
+
+  .members-restricted {
+    padding: 55px 20px 70px;
+  }
+
+  .members-page-title {
+    font-size: 19px;
+  }
+
+  .members-lock {
+    font-size: 42px;
+  }
+
+  .members-restricted h1 {
+    font-size: 29px;
+    line-height: 1.12;
+  }
+
+  .members-login-message {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .members-benefits {
+    padding-left: 25px;
+  }
+
+  .members-benefits li {
+    margin-bottom: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .members-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .member-login-button,
+  .member-buy-button {
+    width: 100%;
+    max-width: 330px;
+  }
+
+  .forgot-password {
+    font-size: 14px;
+  }
+}
