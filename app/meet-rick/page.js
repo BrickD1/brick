@@ -53,15 +53,17 @@ export default function MeetRickPage() {
   const [attendeePhone, setAttendeePhone] = useState("");
   const [concertDate, setConcertDate] = useState("");
 
-  const message =
-    `Hello, how do I make my payment on here for VIP Backstage Meet & Greet?\n\n` +
-    `Attendee Name: ${attendeeName || "Not provided"}\n` +
-    `Phone Number: ${attendeePhone || "Not provided"}\n` +
-    `Concert Date: ${concertDate || "Not selected"}\n` +
-    `Quantity: ${quantity}`;
+  const WHATSAPP_NUMBER = "16507413365";
 
-  const whatsappUrl =
-    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+const message =
+  `Hello, how do I make my payment on here for VIP Backstage Meet & Greet?\n\n` +
+  `Attendee Name: ${attendeeName || "Not provided"}\n` +
+  `Phone Number: ${attendeePhone || "Not provided"}\n` +
+  `Concert Date: ${concertDate || "Not selected"}\n` +
+  `Quantity: ${quantity}`;
+
+const whatsappUrl =
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
   return (
     <>
@@ -283,13 +285,13 @@ export default function MeetRickPage() {
               {/* PAYMENT */}
 
               <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="meet-rick-buy-button"
-              >
-                BUY NOW
-              </a>
+  href={whatsappUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="meet-rick-buy-button"
+>
+  BUY NOW
+</a>
 
 
               {/* NOTICE */}
