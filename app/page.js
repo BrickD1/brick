@@ -49,21 +49,21 @@ const storeProducts = [
   },
   {
     name: "KEYCHAIN - I WANT MY 80S",
-    price: "$6.99",
-    oldPrice: "$9.99",
+    price: "$19.99",
+    oldPrice: "$14.99",
     image: "/images/home-store-2.jpg",
     sale: true,
   },
   {
     name: "RETRO 1982 CONCERT RAGLAN",
-    price: "$29.99",
-    oldPrice: "$39.99",
+    price: "$99.99",
+    oldPrice: "$119.99",
     image: "/images/home-store-3.jpg",
     sale: true,
   },
   {
     name: "RICK SPRINGFIELD TOTE BAG",
-    price: "$19.99",
+    price: "$119.99",
     image: "/images/home-store-4.jpg",
   },
 ];

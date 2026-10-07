@@ -103,14 +103,75 @@ export default function JoinAccessRSPage() {
             </h2>
 
             <p className="membership-price">
-              $59.95
+              $500.00
             </p>
 
             <button
               type="button"
               className="membership-cart-button"
             >
-              ADD TO CART
+              BUY NOW
+            </button>
+
+            <Link
+              href="#"
+              className="membership-details-link"
+            >
+              View full details →
+            </Link>
+
+
+            <p className="membership-label">
+              RICK SPRINGFIELD MERCHANDISE
+            </p>
+
+            <h2>
+              ACCESS-RS
+              <br />
+              MEMBERSHIP VIP
+              <br />
+              2026
+            </h2>
+
+            <p className="membership-price">
+              $1,500.00
+            </p>
+
+            <button
+              type="button"
+              className="membership-cart-button"
+            >
+              BUY NOW
+            </button>
+
+            <Link
+              href="#"
+              className="membership-details-link"
+            >
+              View full details →
+            </Link>
+
+            <p className="membership-label">
+              RICK SPRINGFIELD MERCHANDISE
+            </p>
+
+            <h2>
+              ACCESS-RS
+              <br />
+              MEMBERSHIP VVIP
+              <br />
+              2026
+            </h2>
+
+            <p className="membership-price">
+              $3,000.00
+            </p>
+
+            <button
+              type="button"
+              className="membership-cart-button"
+            >
+              BUY NOW
             </button>
 
             <Link

@@ -5,24 +5,24 @@ import Footer from "../../components/Footer";
 const apparelProducts = [
   {
     name: "BIG HITS TANK TOP",
-    price: "$34.99",
+    price: "$49.99",
     image: "/images/shop-product-1.jpg",
   },
   {
     name: "AIN'T THAT THE WAY TANK",
-    price: "$34.99",
+    price: "$49.99",
     image: "/images/shop-product-2.jpg",
   },
   {
     name: "LOUD NOISES T-SHIRT",
-    price: "$19.99",
+    price: "$74.99",
     oldPrice: "$39.99",
     sale: true,
     image: "/images/shop-product-3.jpg",
   },
   {
     name: "LOSE MYSELF T-SHIRT",
-    price: "$39.99",
+    price: "$99.99",
     image: "/images/shop-product-4.jpg",
   },
 ];
@@ -58,17 +58,17 @@ const musicProducts = [
   },
   {
     name: "CD COLLECTION",
-    price: "$14.99",
+    price: "$39.99",
     image: "/images/shop-music-2.jpg",
   },
   {
     name: "AUTOGRAPHED CD",
-    price: "$25.00",
+    price: "$50.00",
     image: "/images/shop-music-3.jpg",
   },
   {
     name: "CD / DVD COLLECTION",
-    price: "$25.00",
+    price: "$100.00",
     image: "/images/shop-music-4.jpg",
   },
 ];
